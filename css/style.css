@@ -586,19 +586,23 @@ header{
     width: 65px;
     height: 65px;
     background: #25D366;
-    color: #ffffff;
+    color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 34px;
+    font-size: 36px;
     text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    transition: .3s;
     z-index: 99999;
-    transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover{
-    transform: scale(1.12);
-    background: #20ba5a;
+    background:#20ba5a;
+    transform:scale(1.1);
+}
+
+.whatsapp-float i{
+    color:#fff;
 }

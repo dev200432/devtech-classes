@@ -295,39 +295,43 @@
 
             </div>
 
-          <form class="contact-form"
-      action="https://api.web3forms.com/submit"
-      method="POST">
+         
+     <form action="https://formsubmit.co/devanshgiri2004@gmail.com" method="POST" class="contact-form">
 
-    <input type="hidden" name="access_key" value="89310c12-b8e0-49a2-b3b9-ad5b2a9aa818">
+    <!-- Hidden Settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Contact Form Submission - DevTech Coaching">
+    <input type="hidden" name="_next" value="https://dev200432.github.io/devtech-classes/">
 
-    <input type="hidden" name="subject" value="New Contact Form Submission - DevTech Coaching">
+    <!-- Name -->
+    <input
+        type="text"
+        name="Name"
+        placeholder="Your Name"
+        required>
 
-    <input type="hidden" name="from_name" value="DevTech Coaching Website">
+    <!-- Email -->
+    <input
+        type="email"
+        name="Email"
+        placeholder="Your Email"
+        required>
 
-    <input type="hidden" name="redirect" value="https://dev200432.github.io/devtech-classes/">
+    <!-- Phone -->
+    <input
+        type="tel"
+        name="Phone"
+        placeholder="Phone Number"
+        required>
 
-    <input type="text"
-           name="Name"
-           placeholder="Your Name"
-           required>
-
-    <input type="email"
-           name="Email"
-           placeholder="Your Email"
-           required>
-
-    <input type="tel"
-           name="Phone"
-           placeholder="Phone Number"
-           required>
-
+    <!-- Message -->
     <textarea
         name="Message"
-        placeholder="Your Message"
         rows="6"
+        placeholder="Your Message"
         required></textarea>
 
+    <!-- Submit Button -->
     <button type="submit" class="btn">
         Send Message
     </button>

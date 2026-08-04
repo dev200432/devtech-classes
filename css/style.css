@@ -583,22 +583,22 @@ header{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 70px;
-    height: 70px;
-    background: red;
-    color: white;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: #ffffff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 34px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 99999;
+    transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover{
-
-    transform:scale(1.12);
-
-    background:#20ba5a;
-
+    transform: scale(1.12);
+    background: #20ba5a;
 }

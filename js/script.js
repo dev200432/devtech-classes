@@ -84,41 +84,38 @@ window.addEventListener("scroll",()=>{
 
 const form = document.querySelector(".contact-form");
 
-if(form){
+if (form) {
 
-form.addEventListener("submit",function(e){
+    form.addEventListener("submit", function (e) {
 
-    e.preventDefault();
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const message = form.querySelector("textarea").value.trim();
 
-    const name = form.querySelector('input[type="text"]').value.trim();
+        if (name === "" || email === "" || message === "") {
 
-    const email = form.querySelector('input[type="email"]').value.trim();
+            e.preventDefault();
 
-    const message = form.querySelector("textarea").value.trim();
+            alert("Please fill all fields.");
 
-    if(name==="" || email==="" || message===""){
+            return;
+        }
 
-        alert("Please fill all fields.");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        return;
+        if (!emailPattern.test(email)) {
 
-    }
+            e.preventDefault();
 
-    const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            alert("Please enter a valid email.");
 
-    if(!emailPattern.test(email)){
+            return;
+        }
 
-        alert("Please enter a valid email.");
+        // FormSubmit ko form submit karne do
+        alert("Message Sent Successfully!");
 
-        return;
-
-    }
-
-    alert("Message Sent Successfully!");
-
-    form.reset();
-
-});
+    });
 
 }
 

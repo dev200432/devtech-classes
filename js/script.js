@@ -84,38 +84,19 @@ window.addEventListener("scroll",()=>{
 
 const form = document.querySelector(".contact-form");
 
-if (form) {
+if(form){
 
-    form.addEventListener("submit", function (e) {
+form.addEventListener("submit",function(e){
 
-        const name = form.querySelector('input[type="text"]').value.trim();
-        const email = form.querySelector('input[type="email"]').value.trim();
-        const message = form.querySelector("textarea").value.trim();
+    e.preventDefault();
 
-        if (name === "" || email === "" || message === "") {
+    ...
 
-            e.preventDefault();
+    alert("Message Sent Successfully!");
 
-            alert("Please fill all fields.");
+    form.reset();
 
-            return;
-        }
-
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(email)) {
-
-            e.preventDefault();
-
-            alert("Please enter a valid email.");
-
-            return;
-        }
-
-        // FormSubmit ko form submit karne do
-        alert("Message Sent Successfully!");
-
-    });
+});
 
 }
 

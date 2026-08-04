@@ -100,29 +100,16 @@ form.addEventListener("submit",function(e){
 
 }
 
-// Scroll To Top
+// Scroll To Top Button
 
-const topBtn = document.getElementById("topBtn");
+const scrollBtn = document.querySelector(".scroll-top");
 
-if (topBtn) {
+window.addEventListener("scroll", () => {
 
-    window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        scrollBtn.style.display = "flex";
+    } else {
+        scrollBtn.style.display = "none";
+    }
 
-        if (window.scrollY > 300) {
-            topBtn.style.display = "block";
-        } else {
-            topBtn.style.display = "none";
-        }
-
-    });
-
-    topBtn.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-}
+});

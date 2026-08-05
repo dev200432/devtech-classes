@@ -1,77 +1,84 @@
+// ===============================
 // Smooth Scroll
+// ===============================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
     anchor.addEventListener("click", function (e) {
-        e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute("href"));
+        const href = this.getAttribute("href");
 
-        if(target){
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
+        if (href !== "#") {
+
+            e.preventDefault();
+
+            const target = document.querySelector(href);
+
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+
         }
+
     });
+
 });
 
 
+// ===============================
 // Statistics Counter Animation
+// ===============================
 
 const counters = document.querySelectorAll(".counter");
-
 const speed = 100;
 
-const startCounter = () => {
+function startCounter() {
 
     counters.forEach(counter => {
 
         const target = +counter.getAttribute("data-target");
-
         let count = 0;
 
-        const update = () => {
+        function updateCounter() {
 
             const increment = target / speed;
 
-            if(count < target){
+            if (count < target) {
 
                 count += increment;
 
                 counter.innerText = Math.ceil(count);
 
-                setTimeout(update,20);
+                setTimeout(updateCounter, 20);
 
-            }else{
+            } else {
 
                 counter.innerText = target;
 
             }
 
-        };
+        }
 
-        update();
+        updateCounter();
 
     });
 
-};
-
-
-// Counter starts when section becomes visible
+}
 
 const statsSection = document.querySelector(".stats");
-
 let started = false;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    if(statsSection){
+    if (statsSection && !started) {
 
         const top = statsSection.offsetTop - 400;
 
-        if(window.scrollY > top && !started){
+        if (window.scrollY > top) {
 
             startCounter();
-
             started = true;
 
         }
@@ -80,30 +87,74 @@ window.addEventListener("scroll",()=>{
 
 });
 
-// Contact Form Validation
+
+// ===============================
+// Contact Form
+// ===============================
 
 const form = document.querySelector(".contact-form");
 
-if(form){
+if (form) {
 
-    form.addEventListener("submit", function(){
+    form.addEventListener("submit", function () {
 
         alert("Sending Message...");
+
+        // FormSubmit ko form submit karne do
+        // preventDefault nahi lagana
 
     });
 
 }
 
+
+// ===============================
 // Scroll To Top Button
+// ===============================
 
 const scrollBtn = document.querySelector(".scroll-top");
 
-window.addEventListener("scroll", () => {
+if (scrollBtn) {
 
-    if (window.pageYOffset > 300) {
-        scrollBtn.style.display = "flex";
-    } else {
-        scrollBtn.style.display = "none";
-    }
+    window.addEventListener("scroll", () => {
 
-});
+        if (window.scrollY > 300) {
+
+            scrollBtn.style.display = "flex";
+
+        } else {
+
+            scrollBtn.style.display = "none";
+
+        }
+
+    });
+
+    scrollBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+
+// ===============================
+// AOS Animation
+// ===============================
+
+if (typeof AOS !== "undefined") {
+
+    AOS.init({
+
+        duration: 1000,
+        once: true
+
+    });
+
+}

@@ -1,4 +1,4 @@
-/* Reset */
+
 
 *{
     margin:0;
@@ -24,7 +24,7 @@ ul{
     list-style:none;
 }
 
-/* Navbar */
+
 
 header{
     background:#ffffff;
@@ -71,7 +71,7 @@ header{
     background:#1d4ed8;
 }
 
-/* Hero Section */
+
 
 .hero{
     height:100vh;
@@ -158,7 +158,7 @@ header{
     line-height:1.8;
     margin-bottom:20px;
 }
-/* Section Heading */
+
 
 .section-title{
     text-align:center;
@@ -176,7 +176,7 @@ header{
     font-size:18px;
 }
 
-/* Courses */
+
 
 .courses{
     padding:80px 0;
@@ -226,7 +226,7 @@ header{
     align-items:center;
     padding:18px 0;
 }
-/* Why Choose Us */
+
 
 .features{
     padding:80px 0;
@@ -271,7 +271,7 @@ header{
     line-height:1.7;
 }
 
-/* Statistics */
+
 
 .stats{
     background:#2563eb;
@@ -298,7 +298,7 @@ header{
     font-size:20px;
 }
 
-/* Teachers */
+
 
 .teachers{
     padding:80px 0;
@@ -340,7 +340,7 @@ header{
     margin-bottom:25px;
     font-weight:600;
 }
-/* Gallery */
+
 
 .gallery{
     padding:80px 0;
@@ -366,7 +366,7 @@ header{
     transform:scale(1.05);
 }
 
-/* Contact */
+
 
 .contact{
     padding:80px 0 40px;
@@ -415,7 +415,7 @@ header{
     border-color:#2563eb;
 }
 
-/* Footer */
+
 
 .footer{
     background:#2563eb;
@@ -542,7 +542,7 @@ header{
     }
 }
 
-/* Scroll To Top */
+
 
 .scroll-top{
     position: fixed;
@@ -571,9 +571,7 @@ header{
 html{
     scroll-behavior:smooth;
 }
-/* ===========================
-   WhatsApp Floating Button
-=========================== */
+
 
 .whatsapp-float{
     position: fixed;

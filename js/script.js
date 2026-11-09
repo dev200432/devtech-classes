@@ -1,6 +1,4 @@
-// ===============================
-// Smooth Scroll
-// ===============================
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
@@ -27,9 +25,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// ===============================
-// Statistics Counter Animation
-// ===============================
+
 
 const counters = document.querySelectorAll(".counter");
 const speed = 100;
@@ -88,9 +84,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-// ===============================
-// Contact Form
-// ===============================
+
 
 const form = document.querySelector(".contact-form");
 
@@ -100,17 +94,14 @@ if (form) {
 
         alert("Sending Message...");
 
-        // FormSubmit ko form submit karne do
-        // preventDefault nahi lagana
+      
 
     });
 
 }
 
 
-// ===============================
-// Scroll To Top Button
-// ===============================
+
 
 const scrollBtn = document.querySelector(".scroll-top");
 
@@ -144,9 +135,7 @@ if (scrollBtn) {
 }
 
 
-// ===============================
-// AOS Animation
-// ===============================
+
 
 if (typeof AOS !== "undefined") {
 
